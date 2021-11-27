@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import MeetupList from "../components/meetups/MeetupList";
-import react from "react";
 
 function AllMeetupsPage() {
   const [isLoading, setIsLoading] = useState(true);
