@@ -4,7 +4,8 @@ import classes from "./NewMeetupForm.module.css";
 
 const FORM_TEST_INPUTS = {
   title: "test title",
-  image: "https://i.ebayimg.com/images/g/KAoAAOSw6ahhnl6C/s-l200.webp",
+  image:
+    "https://safariclub.org/wp-content/uploads/2021/05/canadatravelalert-oversnap.jpg",
   address: "test address",
   description: "test description",
 };
