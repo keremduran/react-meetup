@@ -2,6 +2,13 @@ import { useRef } from "react";
 import Card from "../ui/Card";
 import classes from "./NewMeetupForm.module.css";
 
+const FORM_TEST_INPUTS = {
+  title: "test title",
+  image: "https://i.ebayimg.com/images/g/KAoAAOSw6ahhnl6C/s-l200.webp",
+  address: "test address",
+  description: "test description",
+};
+
 function NewMeetupForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
@@ -30,19 +37,38 @@ function NewMeetupForm(props) {
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="title">Meetup Title</label>
-          <input type="text" required id="title" ref={titleInputRef} />
+          <input
+            value={FORM_TEST_INPUTS.title}
+            type="text"
+            required
+            id="title"
+            ref={titleInputRef}
+          />
         </div>
         <div className={classes.control}>
           <label htmlFor="image">Meetup Image</label>
-          <input type="url" required id="image" ref={imageInputRef} />
+          <input
+            value={FORM_TEST_INPUTS.image}
+            type="url"
+            required
+            id="image"
+            ref={imageInputRef}
+          />
         </div>
         <div className={classes.control}>
           <label htmlFor="address">Address</label>
-          <input type="text" required id="address" ref={addressInputRef} />
+          <input
+            value={FORM_TEST_INPUTS.address}
+            type="text"
+            required
+            id="address"
+            ref={addressInputRef}
+          />
         </div>
         <div className={classes.control}>
           <label htmlFor="description">Description</label>
           <textarea
+            value={FORM_TEST_INPUTS.description}
             id="description"
             required
             rows="5"
